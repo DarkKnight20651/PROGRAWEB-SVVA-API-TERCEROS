@@ -1,0 +1,45 @@
+<div class="center-content">
+  <mat-card class="example-card" appearance="outlined">
+      <mat-card-header class="header-centered">
+          <mat-card-title>Inicio de sesión</mat-card-title>
+          <mat-card-subtitle> Material y componentes</mat-card-subtitle>
+          <div mat-card-avatar class="example-header-image"></div>
+      </mat-card-header>
+
+      <mat-card-content>
+          <mat-tab-group>
+              <mat-tab>
+                  <mat-form-field class="example-full-width">
+                      <mat-label>Correo electrónico</mat-label>
+                      <input 
+                          type="text" 
+                          matInput 
+                          placeholder="Ingresa tu correo" 
+                          [(ngModel)]="email">
+                      <mat-icon matSuffix></mat-icon>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                      <mat-label>Contraseña</mat-label>
+                      <input 
+                          type="password" 
+                          matInput 
+                          placeholder="Ingresa tu contraseña" 
+                          [(ngModel)]="password">
+                  </mat-form-field>
+
+                  <!-- Botón de inicio de sesión -->
+                  <div class="button-container">
+                      <button 
+                          class="mat-button" 
+                          color="primary" 
+                          (click)="iniciarSesion(email, password)">
+                          Iniciar sesión
+                      </button>
+                  </div>
+              </mat-tab>
+          </mat-tab-group>
+      </mat-card-content>
+  </mat-card>
+</div>
+<app-footer></app-footer>

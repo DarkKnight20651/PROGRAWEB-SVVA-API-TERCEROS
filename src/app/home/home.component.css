@@ -1,0 +1,105 @@
+/* Contenedor principal, centrado y responsivo */
+  /*CARD STYLE MATERIAL DESIGN*/
+  .example-card {
+    max-width: 400px;
+
+  }
+  /*barra superior*/
+  .color-barra{
+    background: linear-gradient(90deg, #aa37a1, #bb86fc); /* Degradado de izquierda a derecha */
+
+
+  }
+  /*ESTYLOS PARA EL HEADER */
+  .header-centered {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+}
+  
+  .center-content{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    text-align: center;
+  }
+  /* Estilos de la tarjeta */
+  .welcome-card {
+    width: 100%;
+    max-width: 600px; /* Ancho máximo de la tarjeta */
+    padding: 30px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #ffffff;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  /* Título de la tarjeta */
+  .welcome-title {
+    font-size: 28px;
+    color: #3a7bd5;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Subtítulo de la tarjeta */
+  .welcome-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Contenido principal de la tarjeta */
+  .welcome-content {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Contenedor de botones */
+  .button-container {
+    text-align: center;
+  }
+  
+  /* Estilo del botón */
+  .button-container button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+  }
+  
+  .button-container button:hover {
+    transform: translateY(-3px); /* Efecto sutil de desplazamiento */
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .welcome-title {
+      font-size: 24px;
+    }
+    
+    .welcome-subtitle {
+      font-size: 16px;
+    }
+  
+    .welcome-content {
+      font-size: 14px;
+    }
+  
+    .button-container button {
+      width: 100%; /* Asegura que el botón ocupe todo el ancho en pantallas pequeñas */
+    }
+  }
+  
