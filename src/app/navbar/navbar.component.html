@@ -1,19 +1,27 @@
 <mat-toolbar class="navbar">
-    <div class="navbar-logo">
-      
+  <div class="navbar-logo"></div>
+
+  <span class="navbar-title">
+    <div *ngIf="userName" class="user-info">
+      <!-- Activador del menú -->
+      <button mat-button [matMenuTriggerFor]="menu">
+        <img [src]="avatar" alt="Imagen del Producto" style="width: 30px; height: auto;" />
+        <span>{{ userName }}</span>
+      </button>
+
+      <!-- Menú desplegable -->
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">Salir</button>
+      </mat-menu>
     </div>
-    
-    <span class="navbar-title">Login Victor Adrián</span>
-    
-    <span class="spacer"></span>
-    
-    <nav class="navbar-links">
-      <a mat-button routerLink="/inicio">Inicio</a>
-      <a mat-button routerLink="/sobre">Contacto</a>
-      <a mat-button routerLink="/servicios">Productos</a>
-      <a mat-button routerLink="/contacto">Blog</a>
-    </nav>
-    
-    <button mat-raised-button color="accent" class="login-button">Salir</button>
-  </mat-toolbar>
-  
+  </span>
+
+  <span class="spacer"></span>
+
+  <nav class="navbar-links">
+    <a mat-button routerLink="/inicio">Inicio</a>
+    <a mat-button routerLink="/sobre">Contacto</a>
+    <a mat-button routerLink="/productos">Productos</a>
+    <a mat-button routerLink="/contacto">Blog</a>
+  </nav>
+</mat-toolbar>

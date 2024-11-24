@@ -35,21 +35,23 @@ import { UserService } from '../user.service';
 })
 
 
+
 export class LoginComponent {
   email: string = '';
   password: string = '';
+  user: any = null;
 
-  constructor(private router: Router, private servicio: UserService) { }
+  constructor(private router: Router, private servicio: UserService) {}
 
   iniciarSesion(email: string, password: string): void {
-    console.log('Email:', email);
-    console.log('Password:', password);
-  
     this.servicio.getUsers().subscribe(
       (users: any[]) => {
         const user = users.find(user => user.email === email && user.password === password);
         if (user) {
           console.log('Inicio de sesión exitoso');
+          this.user = user; // Almacena la información del usuario
+          localStorage.setItem('userName', user.name);
+          localStorage.setItem('avatar', user.avatar); // Guarda el nombre en el localStorage
           this.router.navigate(['/welcome']);
         } else {
           console.error('Credenciales inválidas');
@@ -62,5 +64,4 @@ export class LoginComponent {
       }
     );
   }
-  
 }
